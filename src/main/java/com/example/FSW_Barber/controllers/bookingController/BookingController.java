@@ -23,4 +23,9 @@ public class BookingController {
     public Booking createBooking(@RequestBody Booking booking) {
         return bookingRepository.save(booking);
     }
+
+    @GetMapping("/barberShop/{barberShopId}/user/{userId}")
+    public List<Booking> getBookingsByBarberShopAndUser(@PathVariable Long barberShopId, @PathVariable Long userId) {
+        return bookingRepository.findByServiceBarberShopIdAndUserId(barberShopId, userId);
+    }
 }

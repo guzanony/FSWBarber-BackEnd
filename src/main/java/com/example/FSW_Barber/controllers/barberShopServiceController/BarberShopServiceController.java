@@ -23,4 +23,9 @@ public class BarberShopServiceController {
     public BarberShopService createService(@RequestBody BarberShopService service) {
         return barberShopServiceRepository.save(service);
     }
+
+    @GetMapping("/barberShop/{barberShopId}")
+    public List<BarberShopService> getServicesByBarberShop(@PathVariable Long barberShopId) {
+        return barberShopServiceRepository.findByBarberShopId(barberShopId);
+    }
 }

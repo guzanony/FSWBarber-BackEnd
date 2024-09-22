@@ -1,4 +1,4 @@
-package com.example.FSW_Barber.controllers.BarberShopController;
+package com.example.FSW_Barber.controllers.barberShopController;
 
 
 import com.example.FSW_Barber.domain.barberShop.BarberShop;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/barbershops")
+    @RequestMapping("/barbershops")
 public class BarberShopController {
 
     @Autowired

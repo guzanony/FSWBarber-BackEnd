@@ -11,10 +11,9 @@ public class BarberShopService {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "barberShopId", nullable = false)
     private BarberShop barberShop;
-
     private String name;
     private String description;
     private String imageUrl;
